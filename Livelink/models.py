@@ -52,6 +52,11 @@ class Link(models.Model):
             return f"{self.url}?{query_string}"
         return self.url
 
+    def save(self, *args, **kwargs):
+        if not self.short_code:
+            self.short_code = self.generate_unique_short_code()
+        super().save(*args, **kwargs)
+        
     def __str__(self):
         return f"{self.short_code} - {self.url}"
 
