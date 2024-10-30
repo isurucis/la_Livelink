@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Livelink',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
