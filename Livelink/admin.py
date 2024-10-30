@@ -8,6 +8,12 @@ class LinkAdmin(admin.ModelAdmin):
     list_filter = ('utm_enabled', 'in_bio', 'category')
     readonly_fields = ('clicks', 'created_at', 'updated_at')
 
+    def get_readonly_fields(self, request, obj=None):
+        # Make short_code readonly when editing an existing object
+        if obj:  # When editing (obj is not None)
+            return self.readonly_fields + ('short_code',)
+        return self.readonly_fields
+    
     def save_model(self, request, obj, form, change):
         if not obj.pk:  # Only set created_by during the first save
             obj.created_by = request.user
