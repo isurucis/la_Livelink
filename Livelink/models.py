@@ -13,6 +13,7 @@ class LinkCategory(models.Model):
 class Link(models.Model):
     url = models.URLField()
     short_code = models.SlugField(unique=True)
+    title = models.CharField(max_length=255)  
     category = models.ForeignKey(LinkCategory, on_delete=models.SET_NULL, null=True, blank=True)
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, editable=False)
     utm_enabled = models.BooleanField(default=False)

@@ -10,7 +10,7 @@
     <h1>My Links</h1>
     <ul>
         {% for link in links %}
-            <li><a href="{% url 'forward_link' link.short_code %}" target="_blank">{{ link.short_code }}</a></li>
+            <li><a href="{% url 'forward_link' link.short_code %}" target="_blank">{{ link.title }}</a></li>
         {% endfor %}
     </ul>
 </body>
