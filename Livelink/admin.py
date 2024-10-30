@@ -17,3 +17,6 @@ class LinkAdmin(admin.ModelAdmin):
 admin.site.register(Link, LinkAdmin)
 admin.site.register(LinkCategory)
 admin.site.register(Click)
+admin.site.site_header = "LiveLink"
+admin.site.site_title = "Live Link"
+admin.site.index_title = "Livelink"
