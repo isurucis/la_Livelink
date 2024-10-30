@@ -1,0 +1,17 @@
+<!-- link_in_bio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links in Bio</title>
+</head>
+<body>
+    <h1>My Links</h1>
+    <ul>
+        {% for link in links %}
+            <li><a href="{% url 'forward_link' link.short_code %}" target="_blank">{{ link.short_code }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
