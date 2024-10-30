@@ -1,0 +1,56 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# Static files
+/static/
+media/
+
+# Environment variables
+.env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Coverage reports
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+
+# Migrations
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__init__.py
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Local configuration files
+local_settings.py
+settings_local.py
+
+# MyPy
+.mypy_cache/
+.dmypy.json
