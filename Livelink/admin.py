@@ -1,4 +1,4 @@
-# admin.py
+# Livelink/admin.py
 from django.contrib import admin
 from .models import Link, LinkCategory, Click
 
@@ -13,6 +13,7 @@ class LinkAdmin(admin.ModelAdmin):
             obj.created_by = request.user
         super().save_model(request, obj, form, change)
 
+# Registering the models with the admin site
 admin.site.register(Link, LinkAdmin)
 admin.site.register(LinkCategory)
 admin.site.register(Click)
