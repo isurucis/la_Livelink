@@ -20,7 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<str:short_code>/', views.forward_link, name='forward_link'),
     path('bio/', views.link_in_bio, name='link_in_bio'),
+    path('<str:short_code>/', views.forward_link, name='forward_link'),
+    
     
 ]
