@@ -91,7 +91,6 @@ class LinkAdmin(admin.ModelAdmin):
     
 # Registering the models with the admin site
 admin.site.register(Link, LinkAdmin)
-admin.site.register(BulkLinkCreationForm)
 admin.site.register(LinkCategory)
 admin.site.register(Click)
 admin.site.site_header = "LiveLink Admin"
