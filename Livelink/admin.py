@@ -19,7 +19,7 @@ class LinkAdmin(admin.ModelAdmin):
             obj.created_by = request.user
         super().save_model(request, obj, form, change)
     
-    def bulk_link_creation_button(self, obj):
+    def bulk_link_creation_button(self, request):
         url = reverse('bulk_link_creation')
         return format_html(f'<a class="button" href="{url}">Bulk Create Links</a>')
 

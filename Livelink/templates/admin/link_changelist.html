@@ -1,9 +1,8 @@
-{% extends "admin/base_site.html" %}
+{% extends "admin/change_list.html" %}
+
 {% block content %}
-  <h1>Create Bulk Links</h1>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="button">Create Links</button>
-  </form>
+    {{ block.super }}
+    <div style="margin: 20px 0;">
+        {{ model_admin.bulk_link_creation_button }}
+    </div>
 {% endblock %}
